@@ -12,9 +12,7 @@ class App extends React.Component{
     render(){
         return (
             <ul>
-                <li>
-                    {this.state.people.map(person=>person.name)}
-                </li>
+                {this.state.people.map(person=>(<li key={person.name}>{person.name} {person.craft}</li>))}
             </ul>
         )
     }
